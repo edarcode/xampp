@@ -59,23 +59,69 @@ header {
 }
 
 .stages__wrapper {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 250px;
 }
-.sub__title {
+.stages__title {
   padding: 10px;
 }
+.stages__1,
+.stages__2,
+.stages__3 {
+  padding: 20px 20px 20px 150px;
+  position: relative;
+}
+
 .stages__1 {
   background-color: rgb(255, 47, 0);
-  padding: 10px;
 }
 .stages__2 {
   background-color: rgb(0, 149, 255);
-  padding: 10px;
 }
 .stages__3 {
   background-color: yellow;
-  padding: 10px;
+}
+.stages__1::after,
+.stages__2::after,
+.stages__3::after,
+.stages__3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.stages__2::after {
+  border-radius: initial;
+}
+.stages__3::after,
+.stages__3::before {
+  border-radius: initial;
+  width: 0;
+  height: 0;
+  border-top: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid wheat;
+}
+.stages__3::before {
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 44px solid yellow;
+  z-index: 10;
+  top: 50.3%;
+  left: 23px;
+}
+
+.stages__text {
+  height: 250px;
+  overflow: hidden;
+  line-height: 50px;
 }
 
 .boton__etapas {
@@ -83,12 +129,6 @@ header {
   border: none;
   color: white;
   cursor: pointer;
-}
-
-.text {
-  height: 50px;
-  width: 100px;
-  overflow: hidden;
 }
 
 .collapse {
