@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=devicewidth,initial-scale=1.0" />
+    <title>Galeria de imagenes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="imagenes/logo-bauhaus.jpg" class="logobauhaus" />
+      </a>
+
+      <nav id="navegador">
+        <ul>
+          <li><a href="artistas.html">artistas</a></li>
+          <li><a href="obras.html">obras</a></li>
+          <li><a href="galeriadeimagenes.html">galeria de imagenes</a></li>
+          <li><a href="contacto.html">contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+    
+        <div id="galeria">
+            <h1 class="galeria_title"> Galeria de imagenes</h1>
+           
+            
+        <div class="cajacontenedora  responsive">
+            <div>
+                <img src="imagenes/galeria1.JPG" alt="" width="450px">
+              
+            </div>
+
+            <div>
+                <img src="imagenes/galeria2.JPG" width="450px">
+              
+            </div>
+
+            <div >
+                <img src="imagenes/galeria3.JPG" width="450px">
+                
+            </div>
+        </div>
+
+        <div class="cajacontenedora responsive">
+            <div>
+                <img src="imagenes/galeria4.JPG" alt="" width="450px">
+                
+            </div>
+
+            <div >
+                <img src="imagenes/galeria5.JPG" width="450px">
+                
+            </div>
+
+            <div class="fondo responsive">
+                <img src="imagenes/galeria6.JPG" width="450px">
+                
+            </div>
+        </div>
+
+        <div class="cajacontenedora responsive">
+            <div class="fondo">
+                <img src="imagenes/galeria7.JPG" alt="" width="450px">
+                
+            </div>
+ 
+            <div class="fondo">
+                <img src="imagenes/galeria8.JPG" width="450px">
+                
+            </div>
+
+            <div class="fondo">
+                <img src="imagenes/galeria9.JPG" width="450px">
+                
+            </div>
+        </div>
+
+
+    </section>
+    
+
+    <footer>
+      <ul>
+        <li>Vanguardia Bauhaus</li>
+      </ul>
+      <div>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </div>
+    </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("navegador");
+        if (x.className === " ") {
+          x.className += "responsive";
+        } else {
+          x.className = " ";
+        }
+      }
+    </script>
+  </body>
+</html>

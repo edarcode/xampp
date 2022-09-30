@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=devicewidth,initial-scale=1.0">
+        <title>Galeria de imagenes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+
+<body>
+    <header class="fondo">
+        <div>
+            <a href="index.html">THEMIS</a>
+        </div>
+
+        <div class="iconobarra">
+            <a href="#" class="iconobarra" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+        </div>
+
+        <nav id="navegador" class=" ">
+            <ul>
+                <li><a href="productos.html">productos</a></li>
+                <li><a href="contacto.html">contacto</a></li>
+                <li><a href="galeriadeimagenes.html">galeria de imagenes</a></li>
+                <li><a href="quienes_somos.html">quienes somos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="slides">
+      
+        <h1>Galeria de imagenes</h1>
+        
+        <div class="cajaslider">
+            <img src="imagenes/slider 1.jpeg" class="mySlides">
+            <img src="imagenes/slider3.jpeg" class="mySlides">
+            <img src="imagenes/slider5.jpeg" class="mySlides">
+            <img src="imagenes/slider2.jpeg" class="mySlides">
+            <img src="imagenes/slider4.jpeg" class="mySlides">
+            <img src="imagenes/slider6.jpeg" class="mySlides">
+        </div>
+        
+    </section>
+    
+    <footer>
+        <ul>
+            <li>Términos y Condiciones</li>
+            <li>Políticas de Envío</li>
+        </ul>
+        <div>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+    </footer>
+    <script>
+        function myFunction() {
+
+            var x = document.getElementById("navegador");
+            if (x.className === " ") {
+                x.className += "responsive";
+            } else {
+                x.className = " ";
+            }
+
+        }
+    </script>
+    
+<script>
+    var slideIndex = 1;
+
+    showDivs(slideIndex);
+
+
+
+    function plusDivs(n) {
+
+        showDivs(slideIndex += n);
+
+    }
+
+
+
+    function showDivs(n) {
+
+        var i;
+
+        // acá define qué elemento entra en el slider
+
+        var x = document.getElementsByClassName("mySlides");
+
+        if (n > x.length) {
+            slideIndex = 1
+        }
+
+        if (n < 1) {
+            slideIndex = x.length
+        };
+
+        for (i = 0; i < x.length; i++) {
+
+            x[i].style.display = "none";
+
+        }
+
+        x[slideIndex - 1].style.display = "block";
+
+    }
+
+
+
+    carousel();
+
+    function carousel() {
+
+        var i;
+
+        var x = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < x.length; i++) {
+
+            x[i].style.display = "none";
+
+        }
+
+        slideIndex++;
+
+        if (slideIndex > x.length) {
+            slideIndex = 1
+        }
+
+        x[slideIndex - 1].style.display = "block";
+
+        setTimeout(carousel, 2000); // Cambia la imagen cada 2 segundos
+
+    }
+</script>
+</body>
+</html>

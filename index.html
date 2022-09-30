@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=devicewidth,initial-scale=1.0" />
+    <title>Bauhaus</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="imagenes/logo-bauhaus.jpg" class="logobauhaus" />
+      </a>
+
+      <nav id="navegador">
+        <ul>
+          <li><a href="artistas.html">artistas</a></li>
+          <li><a href="obras.html">obras</a></li>
+          <li><a href="galeriadeimagenes.html">galeria de imagenes</a></li>
+          <li><a href="contacto.html">contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div class="parent">
+        <img
+          src="imagenes/imagenprincipal .png"
+          width="1900"
+          height="1000"
+          class="principal"
+        />
+      </div>
+    </section>
+
+    <section class="bauhaus">
+      <img class="imagenesdeabajo" src="imagenes/portada2.jpg" />
+      <div class="bauhaus__1">
+        <h1 class="bauhaus__title">Sobre la Bauhaus</h1>
+        <p class="bauhaus__textocostado">
+          La Bauhaus, fue un movimiento revolucionario donde sus maestros
+          sentaron precedente, con una nueva forma de pensar, que hasta el día
+          de hoy transforma la vida de las personas. Se trataba de una escuela
+          de arte diferente de cualquier otra que se convirtió en icono del
+          diseño y de la modernidad, heredando el estilo racionalista,
+          funcionalista y moderno de continua renovación con la moda y las
+          tendencias del momento. Todos los diseños se distinguían por su
+          funcionalidad y elegancia, simples, útiles y bellos, en una época en
+          que primaba solo la ornamentación.
+        </p>
+      </div>
+    </section>
+    <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+    <section class="stages">
+      <h1 class="stages__title">La escuela tuvo tres etapas</h1>
+      <div class="stages__wrapper">
+        <div class="stages__1">
+          <h1>1919-1923</h1>
+          <p class="text" id="text1">
+            Desde el momento de su apertura se establecieron los objetivos de la
+            escuela recogidos en el manifiesto de la Bauhaus: “La recuperación
+            de los métodos artesanales en la actividad constructiva, elevar la
+            potencia artesana al mismo nivel que las Bellas Artes e intentar
+            comercializar los productos que, integrados en la producción
+            industrial, se convertirían en objetos de consumo asequibles para el
+            gran público”.Con la idea del arte como respuesta a las necesidades
+            de la sociedad se pretendía eliminar las diferencias entre artistas
+            y artesanos además de intentar vender sus propios productos
+            realizados en la escuela para dejar de depender del Estado (que
+            hasta ese momento era quien los subsidiaba).
+          </p>
+          <button class="boton__etapas" id="btn1">ver mas...</button>
+        </div>
+        <div class="stages__2">
+          <h1>1923-1925</h1>
+          <p>
+            La gran depresión desencadenó la necesidad del cambio de sede de la
+            escuela en Dessau en 1925, una ciudad industrial ansiosa por
+            potenciar su oferta cultural. En esta nueva sede, la escuela se
+            instala en el edificio más emblemático de la Bauhaus diseñado por
+            Walter Gropius: La Escuela Bauhaus (1925-1926), de planta
+            asimétrica, con pabellones a diferentes alturas y predominio de
+            ventanas horizontales (característico de la arquitectura
+            racionalista).
+          </p>
+          <button class="boton__etapas">ver mas...</button>
+        </div>
+        <div class="stages__3">
+          <h1>1925-1933</h1>
+          <p>
+            A partir de 1923, la Bauhaus llevó a cabo un cambio de dirección con
+            la incorporación como profesor de László Moholy-Nagy, que supuso la
+            introducción de las ideas del Constructivismo Ruso y el
+            Neoplasticismo (movimiento artístico iniciado en Holanda con el
+            ideal de llegar a la esencia del arte eliminando lo superfluo).
+            Aunque la metodología estaba basada en una “investigación de la
+            esencia” y un “análisis de la función”, la influencia de la estética
+            creada por la Bauhaus fue minoritaria y hubo que esperar a los años
+            sesenta para que estas ideas se popularizaran comercialmente.
+          </p>
+          <button class="boton__etapas">ver mas...</button>
+        </div>
+      </div>
+    </section>
+    <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <footer>
+      <ul>
+        <li>Vanguardia Bauhaus</li>
+      </ul>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+    </footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("navegador");
+        if (x.className === " ") {
+          x.className += "responsive";
+        } else {
+          x.className = " ";
+        }
+      }
+      let btn1 = document.querySelector("#btn1");
+      let text1 = document.querySelector("#text1");
+      btn1.addEventListener("click", () => {
+        text1.classList.toggle("collapse");
+      });
+    </script>
+  </body>
+</html>
